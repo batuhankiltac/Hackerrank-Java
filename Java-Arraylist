@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        String str = scanner.nextLine();
+        ArrayList<ArrayList<String>> a = new ArrayList<ArrayList<String>>(num);
+        for (int i = 0; i < num; i++) {
+            str = scanner.nextLine();
+            a.add(i, new ArrayList<String>(Arrays.asList(str.split("\\s"))));
+        }
+
+        int m = scanner.nextInt();
+        for (int i = 0; i < m; i++) {
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+            if (x <= a.size() && y < a.get(x-1).size() && y >= 0) {
+                System.out.println(a.get(x-1).get(y));
+            }
+            else {
+                System.out.println("ERROR!");
+            }
+        }
+    }
+}

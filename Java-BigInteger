@@ -1,0 +1,14 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        BigInteger num1 = new BigInteger(scanner.next());
+        BigInteger num2 = new BigInteger(scanner.next());
+
+        System.out.println(num1.add(num2));
+        System.out.println(num1.multiply(num2));
+    }
+}
